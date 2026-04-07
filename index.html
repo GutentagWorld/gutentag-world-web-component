@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gutentag, World!</title>
+</head>
+<body>
+  <gutentag-world></gutentag-world>
+
+  <script>
+    class GutentagWorld extends HTMLElement {
+      constructor() {
+        super()
+        const shadow = this.attachShadow({ mode: 'open' })
+        const h1 = document.createElement('h1')
+        h1.textContent = 'Gutentag, World!'
+        shadow.appendChild(h1)
+      }
+    }
+    customElements.define('gutentag-world', GutentagWorld)
+  </script>
+</body>
+</html>
